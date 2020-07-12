@@ -1,9 +1,11 @@
 # Palogridapp
 Includes R files for data, server, and UI
 
-WWW folder includes all images
-
-app2.R is a single R file that has server and UI code
+www folder includes all images
 
 global.R stores data into objects for the app
+
+server and ui are split up into seperate R files
+
+
 
