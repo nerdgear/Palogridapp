@@ -27,12 +27,18 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                          tags$style(HTML(".leaflet-container{ background:rgba(255,0,0,0.0);}"),
                                                     type = "text/css",
                                                     '.navbar {background-color: #4d0000 ; font-size: 15px;}',
-                                                    '.navbar-default .navbar-brand{color: white; font-family: "Game of Thrones"; font-size: 40px; background-color: #4d0000;}',
+                                                    '.navbar-default .navbar-brand{color: white; font-family: "Cinzel Decorative", cursive; font-size: 40px; background-color: #4d0000;}',
                                                     '.tab-panel{ background-color: maroon; color: white}',
                                                     "#dropdownButton {
                               background-color: #393D3F !important;}")),
+                               tags$style(HTML("
+                                               @import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative&display=swap');
+                                               ")),
+                               tags$style(HTML("
+                                               @import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+                                               ")),
                                
-                               tags$style('.leaflet-control-layers-expanded{ background-color: seashell; font-size: 13px; font-family: "Goudy Old Style";}'),
+                               tags$style('.leaflet-control-layers-expanded{ background-color: seashell; font-size: 13px; font-family: "IM Fell English SC", serif;}'),
                                tags$style(type= "text/css", "#map {height: calc(100vh - 80px) !important;}"),
                                tabPanel(title = 'Interactive Map', style= 'height: 0px',
                                         div(class = 'outer',
@@ -48,7 +54,7 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                         setBackgroundImage(src = "background_map.jpg")),
                                
                                div(style = "position:absolute;right:5em;", actionButton("home", label = "Home", style = "simple", color = "default", size = "md"),
-                                   div(style = "position:absolute;top:35em; right:47em",
+                                   div(style = "position:absolute;top:1em; right:47em",
                                        dropdownButton(
                                          tags$h3("About"),
                                          fluidRow(column(width = 12, 
@@ -58,7 +64,7 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                          tags$a(href="https://github.com/nerdgear/Palogridapp", 
                                                 "here.")),
                                          label = "",
-                                         up = TRUE,
+                                         up = FALSE,
                                          icon = icon("info"),
                                          status = "primary",
                                          circle = TRUE,
@@ -97,7 +103,7 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                                               fluidRow(
                                                                 column(width = 12, 
                                                                        align = "center",
-                                                                       tags$h2(strong("The Wrentits", style = 'color: maroon; font-family: "Goudy Medieval";')))
+                                                                       tags$h2("The Wrentits", style = 'color: maroon; font-family: "IM Fell English SC", serif;'))
                                                                 
                                                               ),
                                                               fluidRow(
@@ -196,7 +202,7 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                                               fluidRow(
                                                                 column(width = 12, 
                                                                        align = "center",
-                                                                       tags$h2("The Song Sparrows", style = 'color: maroon; font-family: "Goudy Medieval";'))
+                                                                       tags$h2("The Song Sparrows", style = 'color: maroon; font-family: "IM Fell English SC", serif;'))
                                                                 
                                                               ),
                                                               fluidRow(
@@ -292,7 +298,7 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                                               fluidRow(
                                                                 column(width = 12,
                                                                        align = "center",
-                                                                       tags$h2("The Wilson's Warblers", style = 'color: maroon; font-family: "Goudy Medieval";'))
+                                                                       tags$h2("The Wilson's Warblers", style = 'color: maroon; font-family: "IM Fell English SC", serif;'))
                                                                 
                                                               ),
                                                               fluidRow(
@@ -387,7 +393,7 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                                               fluidRow(
                                                                 column(width = 12,
                                                                        align = "center",
-                                                                       tags$h2("The Spotted Towhees", style = 'color: maroon; font-family: "Goudy Medieval";'))
+                                                                       tags$h2("The Spotted Towhees", style = 'color: maroon; font-family: "IM Fell English SC", serif;'))
                                                                 
                                                               ),
                                                               fluidRow(
@@ -482,7 +488,7 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                                               fluidRow(
                                                                 column(width = 12,
                                                                        align = "center",
-                                                                       tags$h2("The California Scrub Jays", style = 'color: maroon; font-family: "Goudy Medieval";'))
+                                                                       tags$h2("The California Scrub Jays", style = 'color: maroon; font-family: "IM Fell English SC", serif;'))
                                                                 
                                                               ),
                                                               fluidRow(
@@ -577,7 +583,7 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                                               fluidRow(
                                                                 column(width = 12,
                                                                        align = "center",
-                                                                       tags$h2("The Swainson's Thrushes", style = 'color: maroon; font-family: "Goudy Medieval";'))
+                                                                       tags$h2("The Swainson's Thrushes", style = 'color: maroon; font-family: "IM Fell English SC", serif;'))
                                                                 
                                                               ),
                                                               fluidRow(
@@ -666,7 +672,7 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                                  padding-top: 1mm;",
                                                        fluidRow(column(width = 12,
                                                                        align = "center",
-                                                                       tags$h1("Welcome to Palo", style = 'font-family: "Goudy Medieval"; Georgia, Serif')
+                                                                       tags$h1("Welcome to Palo", style = 'font-family: "IM Fell English SC", serif;')
                                                        )
                                                        ),
                                                        fluidRow(column(width = 12,
@@ -718,7 +724,7 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                                               fluidRow(
                                                                 column(width = 12,
                                                                        align = "center",
-                                                                       tags$h2("Nuttall's White-Crowned Sparrows", style = 'color: maroon; font-family: "Goudy Medieval";'))
+                                                                       tags$h2("Nuttall's White-Crowned Sparrows", style = 'color: maroon; font-family: "IM Fell English SC", serif;'))
                                                                 
                                                               ),
                                                               fluidRow(

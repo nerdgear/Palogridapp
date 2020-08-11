@@ -39,8 +39,10 @@ fonts()
 
 #SET FONTS
 dir.create('~/.fonts')
-file.copy("../shinyapp/www/got.ttf", "~/.fonts")
+file.copy("www/got.ttf", "~/.fonts")
 system('fc-cache -f ~/.fonts')
+
+
 
 dir.create('~/.fonts')
 file.copy("../shinyapp/www/med.ttf", "~/.fonts")
