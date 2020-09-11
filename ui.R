@@ -19,7 +19,7 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                selected = 'Interactive Map',
                                
                                tags$head( tags$meta(name = "viewport", content = "width=1600"),uiOutput("body")),
-      
+                               
                                #withAnim(), #Call to use shinyAnimate
                                # some extra CSS
                                tags$head(tags$link(rel = 'stylesheet', type = 'text/css',
@@ -53,25 +53,26 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                             .navbar-brand {margin-left: 0px;}")),
                                         setBackgroundImage(src = "background_map.jpg")),
                                
-                               div(style = "position:absolute;right:5em;", actionButton("home", label = "Home", style = "simple", color = "default", size = "md"),
-                                   div(style = "position:absolute;top:1em; right:47em",
+                               div(style = "position:absolute;right:5em;", actionButton("home", label = "Home", style = "simple", color = "default", size = "md")),
+                               div(style = "position:absolute;top:9em;right: 1em",
                                        dropdownButton(
                                          tags$h3("About"),
                                          fluidRow(column(width = 12, 
                                                          align= "left",
                                                          img(src="prbo_logo.png", height = "70%", width= "70%"))),
                                          tags$p("Maps, drawings, and application were created by Oliver Nguyen (2020 Spring/Summer Point Blue Conservation Science intern) using spring/summer 2020 bird data collected on Grid 2 at the Palomarin Field Station, Rshiny, and Leaflet. The code for this app can be found",
-                                         tags$a(href="https://github.com/nerdgear/Palogridapp", 
-                                                "here."),
+                                                tags$a(href="https://github.com/nerdgear/Palogridapp", 
+                                                       "here.")),
                                          tags$p("Find out more about the Palomarin Field Station",
-                                         tags$a(href="https://www.pointblue.org/our-work/keystone-datasets/#palomarin-field-station",
-                                               "here."), #There might be problem here 
+                                                tags$a(href="https://www.pointblue.org/our-work/keystone-datasets/#palomarin-field-station", 
+                                                       "here.")),
                                          label = "",
+                                         right=TRUE,
                                          up = FALSE,
                                          icon = icon("info"),
                                          status = "primary",
                                          circle = TRUE,
-                                         width = 300)),
+                                         width = 300),
                                    
                                    ##################CONDITIONAL PANELS ##########################
                                    
@@ -694,22 +695,21 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                                                 tags$p("To begin, simply click on the drop-down legend to the right, and click on a territory to see the species of choice. This map shows the different territories established by individual pairs to rule over their small feudal lands. Click on the nests to see the identities of these birds (i.e. their color band combination), the number of eggs they have laid, and the fate of their future heirs. "))
                                                        ),
                                                        fluidRow(
-                                                         column(width = 12,
-                                                                align = "left",
-                                                                tags$p("Key Terms:"))
+                                                         column(width = 12, 
+                                                                align= "left",
+                                                                tags$p(strong("Key Terms:"), style= "font-style: italic; color: maroon; font-size: 15px;"))
                                                        ),
-
                                                        fluidRow(
-                                                         column(width = 12,
-                                                                align = "left",
-                                                                tags$p("Fledged: baby birds were raised successfully and left the nest alive"))
+                                                         column(width= 12,
+                                                                align="left",
+                                                                tags$p(strong("Fledged:"), "baby birds were raised successfully and left the nest alive"))
                                                        ),
                                                        
-                                                          fluidRow(
-                                                         column(width = 12,
-                                                                align = "left",
-                                                                tags$p("Predated: eggs or baby birds were eaten by a predator while still in the nest"))
-                                                       ), #Check here too
+                                                      fluidRow(
+                                                        column(width=12,
+                                                               align="left",
+                                                               tags$p(strong("Predated:"), "eggs or baby birds were eaten by a predator while still in the nest"))
+                                                      )
                                                        
                                          )
                                        )
@@ -826,5 +826,3 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
 
 
 # end of Navbar 
-
-
