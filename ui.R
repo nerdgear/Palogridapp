@@ -60,9 +60,12 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                          fluidRow(column(width = 12, 
                                                          align= "left",
                                                          img(src="prbo_logo.png", height = "70%", width= "70%"))),
-                                         tags$p("This map was created using data from Point Blue Conservation. The territories reflect current 2020 data. The study plots are divided up into 'Grids', this map reflects the Grid 2 dataset. Maps, drawings, and application was created by Oliver Nguyen (2020 Spring/Summer PRBO intern) using Rshiny and Leaflet. The code for this app can be found",
+                                         tags$p("Maps, drawings, and application were created by Oliver Nguyen (2020 Spring/Summer Point Blue Conservation Science intern) using spring/summer 2020 bird data collected on Grid 2 at the Palomarin Field Station, Rshiny, and Leaflet. The code for this app can be found",
                                          tags$a(href="https://github.com/nerdgear/Palogridapp", 
-                                                "here.")),
+                                                "here."),
+                                         tags$p("Find out more about the Palomarin Field Station",
+                                         tags$a(href="https://www.pointblue.org/our-work/keystone-datasets/#palomarin-field-station",
+                                               "here."), #There might be problem here 
                                          label = "",
                                          up = FALSE,
                                          icon = icon("info"),
@@ -405,7 +408,7 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                                               fluidRow(
                                                                 column(width = 12,
                                                                        align = "left",
-                                                                       tags$p("They are the physical form of stress. Very dashing birds, but very high-strung. They tend to nest in the ground or near the ground. They will scream at you if you come near their nest and will not stop.  Spotted Towhees tend to be very loud and conspicuous when foraging, often kicking around dry leaves, and are not very considerate of the people around them when they do so. Their babies are also very stressy and will throw themselves to the ground when given the chance when you're trying to band them. "))
+                                                                       tags$p("They are the physical form of stress. Very dashing birds, but very high-strung. They tend to nest on the ground or near the ground. They will scream at you if you come near their nest and will not stop.  Spotted Towhees tend to be very loud and conspicuous when foraging, often kicking around dry leaves, and are not very considerate of the people around them when they do so. Their babies are also very stressy and will throw themselves to the ground when given the chance when you're trying to band them. "))
                                                               ),
                                                               
                                                               fluidRow(
@@ -688,8 +691,25 @@ ui <-  tagList( useShinyjs(), #call to use shinyjs,
                                                        fluidRow(
                                                          column(width = 12,
                                                                 align = "left",
-                                                                tags$p("To begin, simply click on the drop-down legend to the right, and click to see the species of choice. This map shows the different territories established by individual pairs to rule over their small feudal lands. Click on the nests to see the identities of these birds (i.e. their color band combination), the number of eggs they have laid, and the fate of their future heirs. "))
-                                                       )
+                                                                tags$p("To begin, simply click on the drop-down legend to the right, and click on a territory to see the species of choice. This map shows the different territories established by individual pairs to rule over their small feudal lands. Click on the nests to see the identities of these birds (i.e. their color band combination), the number of eggs they have laid, and the fate of their future heirs. "))
+                                                       ),
+                                                       fluidRow(
+                                                         column(width = 12,
+                                                                align = "left",
+                                                                tags$p("Key Terms:"))
+                                                       ),
+
+                                                       fluidRow(
+                                                         column(width = 12,
+                                                                align = "left",
+                                                                tags$p("Fledged: baby birds were raised successfully and left the nest alive"))
+                                                       ),
+                                                       
+                                                          fluidRow(
+                                                         column(width = 12,
+                                                                align = "left",
+                                                                tags$p("Predated: eggs or baby birds were eaten by a predator while still in the nest"))
+                                                       ), #Check here too
                                                        
                                          )
                                        )
